@@ -1,3 +1,5 @@
 /.idea/
 /target/
 /.idea/
+/build/*
+/app.iml

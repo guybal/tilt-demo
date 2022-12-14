@@ -1,4 +1,4 @@
-load('ext://pack', 'pack')
+""" load('ext://pack', 'pack') """
 load('ext://restart_process', 'docker_build_with_restart')
 
 local_resource(
@@ -7,7 +7,7 @@ local_resource(
   'rm -rf build/jar-tmp && ' +
   'unzip -o target/app-2.0.1.jar -d build/jar-tmp && ' +
   'rsync --delete --inplace --checksum -r build/jar-tmp/ build/jar',
-  deps = ['./src/', './pom.xml'],
+  deps = ['src', 'pom.xml'],
 )
 
 docker_build_with_restart('tilt-example-image',

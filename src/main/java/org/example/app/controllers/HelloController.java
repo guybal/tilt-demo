@@ -63,7 +63,7 @@ public class HelloController {
 	@RequestMapping("/coffee")
 	public String coffee(){
 		return htmlLandingPage("Who doesn't like coffee?",
-				"my favorite is Cappuccino");
+				"my favorite is Cappuccino!!!");
 	}
 
 	private String htmlLandingPage(String header, String description){
