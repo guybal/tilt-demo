@@ -15,8 +15,8 @@ docker_build_with_restart('tilt-example-image',
     dockerfile='./Dockerfile',
     entrypoint=['java', '-noverify', '-cp', '.:./lib/*', 'org.example.app.ExampleApp'],
     live_update = [
-          sync('./build/jar/BOOT-INF/classes', '/workspace/BOOT-INF/classes'),
-          sync('./build/jar/BOOT-INF/lib', '/workspace/BOOT-INF/lib'),
+          sync('./build/jar/BOOT-INF/classes', '/workspace'),
+          sync('./build/jar/BOOT-INF/lib', '/workspace/lib'),
           sync('./build/jar/META-INF', '/workspace/META-INF'),
         ],
 )
